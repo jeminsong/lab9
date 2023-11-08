@@ -1,4 +1,7 @@
-// TODO: Add the required header
+// Jemin Song
+// jeminsong@csu.fullerton.edu
+// @jeminsong
+// Partners: @lybrenda
 
 #include <iostream>
 #include <string>
@@ -8,18 +11,24 @@
 // The return value is the average mean of all elements of scores, except for
 // the minimum and maximum elements.
 double JudgeAverage(std::vector<double>& scores) {
-  // TODO: Compute the sum of all elements
-
-  // TODO: Compute the minimum and maximum
-
-  // TODO: Adjust the sum by eliminating the minimum and maximum
-
-  // TODO: Compute the denominators
-
-  // TODO: Compute the average meand and return it
-
-  // TODO: Remove the return statement below
-  return 0;
+  double sum = 0.0;
+  for (int i = 0; i < scores.size(); ++i) {
+    sum += (scores[i]);
+  }
+  double max = scores[0];
+  double min = scores[0];
+  for (double score : scores) {
+    if (score > max) {
+      max = score;
+    }
+    if (score < min) {
+      min = score;
+    }
+  }
+  sum = sum - min;
+  sum = sum - max;
+  double average = sum / (scores.size() - 2);
+  return average;
 }
 
 int main(int argc, char* argv[]) {
