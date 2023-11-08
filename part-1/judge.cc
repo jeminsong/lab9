@@ -12,8 +12,8 @@
 // the minimum and maximum elements.
 double JudgeAverage(std::vector<double>& scores) {
   double sum = 0.0;
-  for (int i = 0; i < scores.size(); ++i) {
-    sum += (scores[i]);
+  for (double& score : scores) {
+    sum += score;
   }
   double max = scores[0];
   double min = scores[0];
